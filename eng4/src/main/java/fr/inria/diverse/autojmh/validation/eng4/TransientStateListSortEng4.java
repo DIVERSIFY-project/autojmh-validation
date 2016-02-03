@@ -35,6 +35,7 @@ public class TransientStateListSortEng4 {
 
 
     @Benchmark
+    @OperationsPerInvocation(10)
     public void benchSortArrayListEng4(Blackhole bh) {
         List<Integer> list = new ArrayList<Integer>();
         for(int i=0, lgth=10; i<lgth; i++) {

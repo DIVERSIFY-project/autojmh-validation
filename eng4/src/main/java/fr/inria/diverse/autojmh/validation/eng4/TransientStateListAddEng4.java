@@ -33,6 +33,7 @@ public class TransientStateListAddEng4 {
     }
 
     @Benchmark
+    @OperationsPerInvocation(10)
     public void benchAddEng4(Blackhole bh) {
         List<Integer> list = new ArrayList<Integer>();
         for(int i=0, lgth=10; i<lgth; i++) {

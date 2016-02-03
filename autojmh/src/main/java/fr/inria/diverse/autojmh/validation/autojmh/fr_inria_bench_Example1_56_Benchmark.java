@@ -16,20 +16,21 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class fr_inria_bench_Example1_56_Benchmark {
 
-    static final String DATA_ROOT_FOLDER = "C:/MarcelStuff/PROJECTS/benchsource_work/log";
-    static final String DATA_FILE = "fr-inria-bench-Example1-56--main-sun.misc.Launcher$AppClassLoader@106d69c";
+    static final String DATA_ROOT_FOLDER = Main.DATA_ROOT_FOLDER;
+    static final String DATA_FILE = "fr-inria-bench-Example1-60--main-sun.misc.Launcher$AppClassLoader@106d69c";
 
     public ArrayList<Integer> a;
 
     @Setup(Level.Trial)
     public void setup() {
         try {
-            Loader fr_inria_bench_Example1_51_s = new Loader();
-            fr_inria_bench_Example1_51_s.openStream(DATA_ROOT_FOLDER, DATA_FILE);
+            //Loader fr_inria_bench_Example1_51_s = new Loader();
+            //fr_inria_bench_Example1_51_s.openStream(DATA_ROOT_FOLDER, DATA_FILE);
 
-            a = fr_inria_bench_Example1_51_s.readIntegerArrayList();
+            //a = fr_inria_bench_Example1_51_s.readIntegerArrayList();
+            a = new ArrayList<Integer>();
 
-            fr_inria_bench_Example1_51_s.closeStream();
+            //fr_inria_bench_Example1_51_s.closeStream();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -37,16 +38,17 @@ public class fr_inria_bench_Example1_56_Benchmark {
 
     @Setup(Level.Invocation)
     public void setupIteration() {
-        a.set(0, 7);
-        a.set(1, 1);
-        a.set(2, 9);
-        a.set(3, 6);
-        a.set(4, 0);
-        a.set(5, 3);
-        a.set(6, 2);
-        a.set(7, 4);
-        a.set(8, 5);
-        a.set(9, 0);
+        a.clear();
+        a.add(7);
+        a.add(1);
+        a.add(9);
+        a.add(6);
+        a.add(0);
+        a.add(3);
+        a.add(2);
+        a.add(4);
+        a.add(5);
+        a.add(0);
     }
 
     @Benchmark

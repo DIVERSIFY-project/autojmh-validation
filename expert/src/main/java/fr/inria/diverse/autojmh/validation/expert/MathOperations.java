@@ -33,7 +33,6 @@ public class MathOperations {
     @Benchmark
     public void benchEquationValidated() {
         angle += Math.abs(Math.sin(y)) / Math.PI;
-        //return angle;
     }
 
     public static void main(String[] args) throws RunnerException {

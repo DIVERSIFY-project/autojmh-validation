@@ -26,13 +26,13 @@ public class TransientStateListAdd {
 
 
 
-    //@Benchmark
+    @Benchmark
     public ArrayList<Integer> baselineValidated() {
         return new ArrayList<Integer>();
     }
 
-    //@Benchmark
-    //@OperationsPerInvocation(11)
+    @Benchmark
+    @OperationsPerInvocation(11)
     public ArrayList<Integer> benchAddValidated() {
         ArrayList<Integer> a = new ArrayList<Integer>();
         a.add(1);

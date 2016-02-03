@@ -16,8 +16,8 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class fr_inria_bench_Example1_40_2_Benchmark {
 
-    static final String DATA_ROOT_FOLDER = "C:/MarcelStuff/PROJECTS/benchsource_work/log";
-    static final String DATA_FILE = "fr-inria-bench-Example1-40-2--main-sun.misc.Launcher$AppClassLoader@106d69c";
+    static final String DATA_ROOT_FOLDER = Main.DATA_ROOT_FOLDER;
+    static final String DATA_FILE = "fr-inria-bench-Example1-37--main-sun.misc.Launcher$AppClassLoader@106d69c-2";
 
     public double sinSum;
     public MyFunction c;
@@ -29,7 +29,7 @@ public class fr_inria_bench_Example1_40_2_Benchmark {
             fr_inria_bench_Example1_40_s.openStream(DATA_ROOT_FOLDER, DATA_FILE);
 
             sinSum = fr_inria_bench_Example1_40_s.readdouble();
-            c = (FunB) fr_inria_bench_Example1_40_s.readSerializable();
+            c = (MyFunction) fr_inria_bench_Example1_40_s.readSerializable();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

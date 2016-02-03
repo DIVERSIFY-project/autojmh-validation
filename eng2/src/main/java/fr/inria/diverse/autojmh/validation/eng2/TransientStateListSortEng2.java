@@ -37,7 +37,7 @@ public class TransientStateListSortEng2 {
         add(8);
     }};
 
-    //@Benchmark
+    @Benchmark
     public void benchSortArrayListEng2() {
         b.sort(new Comparator<Integer>() {
             public int compare(Integer o1, Integer o2) {

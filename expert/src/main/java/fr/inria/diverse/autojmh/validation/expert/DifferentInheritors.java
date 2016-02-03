@@ -39,7 +39,7 @@ public class DifferentInheritors {
      *
      * We *don't* want to estimate the performance of the c.calc method.
      */
-    //@Benchmark
+    @Benchmark
     public double benchFunAArray100Validated() {
         FunA c = new FunA();
         for (int i = 0; i < 100; i++) {
@@ -54,7 +54,7 @@ public class DifferentInheritors {
      *
      * We *don't* want to estimate the performance of the c.calc method.
      */
-    //@Benchmark
+    @Benchmark
     public double benchFunBArray100Validated() {
         FunB c = new FunB();
         for (int i = 0; i < 100; i++) {

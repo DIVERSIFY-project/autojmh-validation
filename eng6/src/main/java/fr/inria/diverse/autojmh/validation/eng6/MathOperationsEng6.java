@@ -28,12 +28,10 @@ public class MathOperationsEng6 {
     @Benchmark
     @OperationsPerInvocation(1)
     public void benchSimpleMult(MathOperationsEng6 b) {
-
         double c = b.x*b.y;
     }
 
     double acum = 0;
-
     private static double PI = Math.PI * 3;
 
     @Benchmark

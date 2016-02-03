@@ -23,11 +23,6 @@ public class TransientStateListAddEng2 {
     ArrayList<Integer> a = new ArrayList<Integer>(capacity);
 
     @Benchmark
-    public void baselineListAddEng2(Blackhole bh) {
-
-    }
-
-    @Benchmark
     public void benchAdd1Eng2(Blackhole bh) {
         //Put the code to be benchmarked here!
         if (a.size() < capacity) a.add(value);
